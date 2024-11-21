@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DepartamentoController;
+use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Departamento;
 use Illuminate\Support\Facades\Route;
@@ -32,5 +33,6 @@ Route::middleware('auth')->group(function () {
 // })->name('departamentos.view');
 
 Route::resource('departamentos', DepartamentoController::class);
+Route::resource('empleados', EmpleadoController::class);
 
 require __DIR__.'/auth.php';
