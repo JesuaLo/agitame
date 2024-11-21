@@ -13,7 +13,7 @@ class EmpleadoController extends Controller
     public function index()
     {
         return view('empleados.index', [
-            'empleados' => Empleado::all(),
+            'empleados' => Empleado::with('departamento')->get(),
         ]);
     }
 

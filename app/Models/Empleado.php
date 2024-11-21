@@ -9,4 +9,9 @@ class Empleado extends Model
 {
     /** @use HasFactory<\Database\Factories\EmpleadoFactory> */
     use HasFactory;
+
+    public function departamento()
+    {
+        return $this->belongsTo(Departamento::class);
+    }
 }

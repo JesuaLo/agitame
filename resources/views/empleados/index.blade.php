@@ -45,7 +45,9 @@
                                             {{ $empleado->apellidos }}
                                         </td>
                                         <td class="px-6 py-4">
-                                            {{ $empleado->departamento_id }}
+                                            <a href="{{ route('departamentos.show', $empleado->departamento) }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                                {{ $empleado->departamento->denominacion }}
+                                            </a>
                                         </td>
                                         <td class="px-6 py-4 flex items-center">
                                             <a href="{{ route('empleados.edit', $empleado) }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Editar</a>
